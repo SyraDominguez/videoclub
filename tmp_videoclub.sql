@@ -1,4 +1,6 @@
-CREATE TABLE tmp_videoclub (
+SET SCHEMA 'practica_videoclub';
+
+CREATE TABLE IF NOT EXISTS tmp_videoclub (
 	id_copia int4 NULL,
 	fecha_alquiler_texto date NULL,
 	dni varchar(50) NULL,
@@ -21,6 +23,8 @@ CREATE TABLE tmp_videoclub (
 	fecha_alquiler date NULL,
 	fecha_devolucion date NULL
 );
+
+
 INSERT INTO tmp_videoclub (id_copia,fecha_alquiler_texto,dni,nombre,apellido_1,apellido_2,email,telefono,codigo_postal,fecha_nacimiento,numero,piso,letra,calle,ext,titulo,genero,sinopsis,director,fecha_alquiler,fecha_devolucion) VALUES
 	 (3,'2024-01-28','1124603H','Ivan','Santana','Medina','ivan.santana.medina@gmail.com','694804631','47007','2005-02-15','6','3','D','Francisco Pizarro','3D','El padrino','Drama','Don Vito Corleone, conocido dentro de los círculos del hampa como ''El Padrino'', es el patriarca de una de las cinco familias que ejercen el mando de la Cosa Nostra en Nueva York en los años cuarenta. Don Corleone tiene cuatro hijos: una chica, Connie, y tres varones; Sonny, Michael y Fredo. Cuando el Padrino reclina intervenir en el negocio de estupefacientes, empieza una cruenta lucha de violentos episodios entre las distintas familias del crimen organizado.','Francis Ford Coppola','2024-01-28',NULL),
 	 (4,'2024-01-30','1396452F','Maria carmen','Crespo','Reyes','maria carmen.crespo.reyes@gmail.com','607425989','47005','2000-11-17','58','1','A','Francisco de Goya','1A','El padrino','Drama','Don Vito Corleone, conocido dentro de los círculos del hampa como ''El Padrino'', es el patriarca de una de las cinco familias que ejercen el mando de la Cosa Nostra en Nueva York en los años cuarenta. Don Corleone tiene cuatro hijos: una chica, Connie, y tres varones; Sonny, Michael y Fredo. Cuando el Padrino reclina intervenir en el negocio de estupefacientes, empieza una cruenta lucha de violentos episodios entre las distintas familias del crimen organizado.','Francis Ford Coppola','2024-01-30','2024-01-31'),
